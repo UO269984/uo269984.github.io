@@ -1,0 +1,167 @@
+
+body {
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+canvas {
+	background: white;
+	padding: 0px;
+	margin: 0px;
+}
+
+h1 {
+	font-size: 1.6em;
+	margin: 0.9em 0px 0.7em;
+}
+
+h2 {
+	font-size: 1.17em;
+	margin: 1.1em 0px 0.7em;
+}
+
+#splitter {
+	cursor: col-resize;
+	width: 20px;
+}
+
+#splitter > div {
+	margin: auto;
+	width: 1px;
+	height: 100vh;
+	background: #666666;
+}
+
+#simulation {
+	flex-grow: 1;
+}
+
+#simulation, main {
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+#simulation-graphs {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.sim-graph {
+	margin: 0.2em;
+}
+
+img#logo {
+	width: 25em;
+	margin-top: 0.4em;
+	margin-bottom: 1em;
+}
+
+#config-textarea {
+	width: 20em;
+	height: 20em;
+	display: block;
+}
+
+#logo, #load-log-file, #editor-config, #vehicle-config, #simulation > div:first-child {
+	margin-left: 1.5em;
+}
+
+#load-log-file > div:first-child {
+	font-size: 1.4em;
+	display: block;
+	
+	margin-bottom: 0.6em;
+}
+
+#loaded-log-filename {
+	background: #4e4e4e;
+	
+	padding: 0.3em 0.6em;
+	border-radius: 0.1em;
+	margin: 0.5em;
+}
+
+.editable-graph {
+	display: inline-grid;
+}
+
+.graph-controls {
+	padding: 0.35em;
+	margin-top: 0.2em;
+	background: white;
+	color: black;
+}
+
+.graph-controls button {
+	vertical-align: text-top;
+	position: relative;
+	
+	border: 0px;
+	margin: 0px;
+	padding: 0px !important;
+	width: 47px;
+	height: 47px;
+}
+
+.graph-controls button > img {
+	width: 40px;
+	vertical-align: middle;
+}
+
+.graph-controls button .tooltip {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	
+	text-align: center;
+	font-size: 12px;
+	color: white;
+	background: #444444;
+	
+	width: 86px;
+	margin: 8px 0px 8px -43px;
+	padding: 4px;
+	border-radius: 5px;
+	
+	display: none;
+	z-index: 1;
+}
+
+@media (hover: hover) {
+	.graph-controls button:hover .tooltip {
+		display: block;
+		animation: tooltipkeys 1.2s linear;
+	}
+}
+
+.button-controls {
+	font-size: 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+.basic-controls {
+	margin-left: auto;
+}
+
+.text-bt {
+	font-size: 25px;
+}
+
+#vehicleInputLog-input {
+	display: none;
+}
+
+@keyframes tooltipkeys {
+	0% {
+		opacity: 0;
+	}
+	92% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
