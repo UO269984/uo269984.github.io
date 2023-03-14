@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Conversor unidades</title>
+	<link rel="stylesheet" type="text/css" href="ConversorUnidades.css" />
+	
+	<script src="ConversorUnidades.js"></script>
+</head>
+<body>
+	<h1>Conversor unidades</h1>
+	<div class="Conversor">
+		<div class="InOutValores">
+			<label id="pantallaAConvertirLb" for="pantallaAConvertir"></label>
+			<input id="pantallaAConvertir" class="PantallaConversor" name="pantallaAConvertir" type="text" title="pantalla" value="" disabled />
+			
+			<label id="pantallaConvertidoLb" for="pantallaConvertido"></label>
+			<input id="pantallaConvertido" class="PantallaConversor" name="pantallaConvertido" type="text" title="pantalla" value="" disabled />
+			
+			<div class="BotonesConversor">
+				<input type="button" value="7" onClick="gui.pressCharBt('7')" />
+				<input type="button" value="8" onClick="gui.pressCharBt('8')" />
+				<input type="button" value="9" onClick="gui.pressCharBt('9')" />
+				
+				<input type="button" value="4" onClick="gui.pressCharBt('4')" />
+				<input type="button" value="5" onClick="gui.pressCharBt('5')" />
+				<input type="button" value="6" onClick="gui.pressCharBt('6')" />
+				
+				<input type="button" value="1" onClick="gui.pressCharBt('1')" />
+				<input type="button" value="2" onClick="gui.pressCharBt('2')" />
+				<input type="button" value="3" onClick="gui.pressCharBt('3')" />
+				
+				<input type="button" value="0" onClick="gui.pressCharBt('0')" />
+				<input type="button" value="." onClick="gui.pressCharBt('.')" />
+				<input type="button" value="-" onClick="gui.pressCharBt('-')" />
+				<input id="clearBt" type="button" value="C" onClick="gui.clearScreen()" />
+			</div>
+		</div>
+		<div>
+			<div class="SelectorUnidades">
+				<div>
+					<input id="Distancia" type="button" value="Distancia" onClick="gui.setUnitsData('Distancia')" />
+					<input id="Superficie" type="button" value="Superficie" onClick="gui.setUnitsData('Superficie')" />
+					<input id="Volumen" type="button" value="Volumen" onClick="gui.setUnitsData('Volumen')" />
+					<input id="Tiempo" type="button" value="Tiempo" onClick="gui.setUnitsData('Tiempo')" />
+					<input id="Potencia" type="button" value="Potencia" onClick="gui.setUnitsData('Potencia')" />
+					<input id="Energia" type="button" value="Energía" onClick="gui.setUnitsData('Energia')" />
+				</div>
+				
+				<p>Desde</p>
+				<div class="unitsBts">
+					<input class="src Distancia anyoLuz" type="button" value="año luz" onClick="gui.setSrcUnit('anyoLuz')" />
+					<input class="src Distancia millNau" type="button" value="mill nau" onClick="gui.setSrcUnit('millNau')" />
+					<input class="src Distancia mill" type="button" value="mill" onClick="gui.setSrcUnit('mill')" />
+					<input class="src Distancia km" type="button" value="km" onClick="gui.setSrcUnit('km')" />
+					<input class="src Distancia m" type="button" value="m" onClick="gui.setSrcUnit('m')" />
+					<input class="src Distancia yd" type="button" value="yd" onClick="gui.setSrcUnit('yd')" />
+					<input class="src Distancia pies" type="button" value="pies" onClick="gui.setSrcUnit('pies')" />
+					<input class="src Distancia dc" type="button" value="dc" onClick="gui.setSrcUnit('dc')" />
+					<input class="src Distancia in" type="button" value="in" onClick="gui.setSrcUnit('in')" />
+					<input class="src Distancia cm" type="button" value="cm" onClick="gui.setSrcUnit('cm')" />
+					<input class="src Distancia mm" type="button" value="mm" onClick="gui.setSrcUnit('mm')" />
+					<input class="src Distancia µm" type="button" value="µm" onClick="gui.setSrcUnit('µm')" />
+					<input class="src Distancia nm" type="button" value="nm" onClick="gui.setSrcUnit('nm')" />
+					<input class="src Distancia pc" type="button" value="pc" onClick="gui.setSrcUnit('pc')" />
+
+					<input class="src Superficie km2" type="button" value="km2" onClick="gui.setSrcUnit('km2')" />
+					<input class="src Superficie hm2" type="button" value="hm2" onClick="gui.setSrcUnit('hm2')" />
+					<input class="src Superficie m2" type="button" value="m2" onClick="gui.setSrcUnit('m2')" />
+					<input class="src Superficie dm2" type="button" value="dm2" onClick="gui.setSrcUnit('dm2')" />
+					<input class="src Superficie mm2" type="button" value="mm2" onClick="gui.setSrcUnit('mm2')" />
+					<input class="src Superficie µm2" type="button" value="µm2" onClick="gui.setSrcUnit('µm2')" />
+					<input class="src Superficie nm2" type="button" value="nm2" onClick="gui.setSrcUnit('nm2')" />
+
+					<input class="src Volumen km3" type="button" value="km3" onClick="gui.setSrcUnit('km3')" />
+					<input class="src Volumen m3" type="button" value="m3" onClick="gui.setSrcUnit('m3')" />
+					<input class="src Volumen dm3" type="button" value="dm3" onClick="gui.setSrcUnit('dm3')" />
+					<input class="src Volumen l" type="button" value="l" onClick="gui.setSrcUnit('l')" />
+					<input class="src Volumen mc3" type="button" value="mc3" onClick="gui.setSrcUnit('mc3')" />
+					<input class="src Volumen mm3" type="button" value="mm3" onClick="gui.setSrcUnit('mm3')" />
+
+					<input class="src Tiempo anyo" type="button" value="año" onClick="gui.setSrcUnit('anyo')" />
+					<input class="src Tiempo semana" type="button" value="semana" onClick="gui.setSrcUnit('semana')" />
+					<input class="src Tiempo día" type="button" value="día" onClick="gui.setSrcUnit('día')" />
+					<input class="src Tiempo h" type="button" value="h" onClick="gui.setSrcUnit('h')" />
+					<input class="src Tiempo min" type="button" value="min" onClick="gui.setSrcUnit('min')" />
+					<input class="src Tiempo s" type="button" value="s" onClick="gui.setSrcUnit('s')" />
+					<input class="src Tiempo ms" type="button" value="ms" onClick="gui.setSrcUnit('ms')" />
+
+					<input class="src Potencia kw" type="button" value="kw" onClick="gui.setSrcUnit('kw')" />
+					<input class="src Potencia hp" type="button" value="hp" onClick="gui.setSrcUnit('hp')" />
+					<input class="src Potencia cv" type="button" value="cv" onClick="gui.setSrcUnit('cv')" />
+					<input class="src Potencia w" type="button" value="w" onClick="gui.setSrcUnit('w')" />
+
+					<input class="src Energia kw·h" type="button" value="kw·h" onClick="gui.setSrcUnit('kw·h')" />
+					<input class="src Energia MJ" type="button" value="MJ" onClick="gui.setSrcUnit('MJ')" />
+					<input class="src Energia w·h" type="button" value="w·h" onClick="gui.setSrcUnit('w·h')" />
+					<input class="src Energia KJ" type="button" value="KJ" onClick="gui.setSrcUnit('KJ')" />
+					<input class="src Energia cal" type="button" value="cal" onClick="gui.setSrcUnit('cal')" />
+					<input class="src Energia J" type="button" value="J" onClick="gui.setSrcUnit('J')" />
+					<input class="src Energia ev" type="button" value="ev" onClick="gui.setSrcUnit('ev')" />
+				</div>
+				
+				<p>A</p>
+				<div class="unitsBts">
+					<input class="dst Distancia anyoLuz" type="button" value="año luz" onClick="gui.setDstUnit('anyoLuz')" />
+					<input class="dst Distancia millNau" type="button" value="mill nau" onClick="gui.setDstUnit('millNau')" />
+					<input class="dst Distancia mill" type="button" value="mill" onClick="gui.setDstUnit('mill')" />
+					<input class="dst Distancia km" type="button" value="km" onClick="gui.setDstUnit('km')" />
+					<input class="dst Distancia m" type="button" value="m" onClick="gui.setDstUnit('m')" />
+					<input class="dst Distancia yd" type="button" value="yd" onClick="gui.setDstUnit('yd')" />
+					<input class="dst Distancia pies" type="button" value="pies" onClick="gui.setDstUnit('pies')" />
+					<input class="dst Distancia dc" type="button" value="dc" onClick="gui.setDstUnit('dc')" />
+					<input class="dst Distancia in" type="button" value="in" onClick="gui.setDstUnit('in')" />
+					<input class="dst Distancia cm" type="button" value="cm" onClick="gui.setDstUnit('cm')" />
+					<input class="dst Distancia mm" type="button" value="mm" onClick="gui.setDstUnit('mm')" />
+					<input class="dst Distancia µm" type="button" value="µm" onClick="gui.setDstUnit('µm')" />
+					<input class="dst Distancia nm" type="button" value="nm" onClick="gui.setDstUnit('nm')" />
+					<input class="dst Distancia pc" type="button" value="pc" onClick="gui.setDstUnit('pc')" />
+
+					<input class="dst Superficie km2" type="button" value="km2" onClick="gui.setDstUnit('km2')" />
+					<input class="dst Superficie hm2" type="button" value="hm2" onClick="gui.setDstUnit('hm2')" />
+					<input class="dst Superficie m2" type="button" value="m2" onClick="gui.setDstUnit('m2')" />
+					<input class="dst Superficie dm2" type="button" value="dm2" onClick="gui.setDstUnit('dm2')" />
+					<input class="dst Superficie mm2" type="button" value="mm2" onClick="gui.setDstUnit('mm2')" />
+					<input class="dst Superficie µm2" type="button" value="µm2" onClick="gui.setDstUnit('µm2')" />
+					<input class="dst Superficie nm2" type="button" value="nm2" onClick="gui.setDstUnit('nm2')" />
+
+					<input class="dst Volumen km3" type="button" value="km3" onClick="gui.setDstUnit('km3')" />
+					<input class="dst Volumen m3" type="button" value="m3" onClick="gui.setDstUnit('m3')" />
+					<input class="dst Volumen dm3" type="button" value="dm3" onClick="gui.setDstUnit('dm3')" />
+					<input class="dst Volumen l" type="button" value="l" onClick="gui.setDstUnit('l')" />
+					<input class="dst Volumen mc3" type="button" value="mc3" onClick="gui.setDstUnit('mc3')" />
+					<input class="dst Volumen mm3" type="button" value="mm3" onClick="gui.setDstUnit('mm3')" />
+
+					<input class="dst Tiempo anyo" type="button" value="año" onClick="gui.setDstUnit('anyo')" />
+					<input class="dst Tiempo semana" type="button" value="semana" onClick="gui.setDstUnit('semana')" />
+					<input class="dst Tiempo día" type="button" value="día" onClick="gui.setDstUnit('día')" />
+					<input class="dst Tiempo h" type="button" value="h" onClick="gui.setDstUnit('h')" />
+					<input class="dst Tiempo min" type="button" value="min" onClick="gui.setDstUnit('min')" />
+					<input class="dst Tiempo s" type="button" value="s" onClick="gui.setDstUnit('s')" />
+					<input class="dst Tiempo ms" type="button" value="ms" onClick="gui.setDstUnit('ms')" />
+
+					<input class="dst Potencia kw" type="button" value="kw" onClick="gui.setDstUnit('kw')" />
+					<input class="dst Potencia hp" type="button" value="hp" onClick="gui.setDstUnit('hp')" />
+					<input class="dst Potencia cv" type="button" value="cv" onClick="gui.setDstUnit('cv')" />
+					<input class="dst Potencia w" type="button" value="w" onClick="gui.setDstUnit('w')" />
+
+					<input class="dst Energia kw·h" type="button" value="kw·h" onClick="gui.setDstUnit('kw·h')" />
+					<input class="dst Energia MJ" type="button" value="MJ" onClick="gui.setDstUnit('MJ')" />
+					<input class="dst Energia w·h" type="button" value="w·h" onClick="gui.setDstUnit('w·h')" />
+					<input class="dst Energia KJ" type="button" value="KJ" onClick="gui.setDstUnit('KJ')" />
+					<input class="dst Energia cal" type="button" value="cal" onClick="gui.setDstUnit('cal')" />
+					<input class="dst Energia J" type="button" value="J" onClick="gui.setDstUnit('J')" />
+					<input class="dst Energia ev" type="button" value="ev" onClick="gui.setDstUnit('ev')" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>gui.startup()</script>
+</body>

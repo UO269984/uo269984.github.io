@@ -1,0 +1,100 @@
+body {
+	font: 100 1em "Arial", sans-serif;
+	background: #d3ffcf;
+	
+	margin: 5% 10%;
+}
+
+h1 {
+	font-size: 4em;
+	
+	margin: 1em 0em;
+}
+
+h2 {
+	color: black;
+	font-size: 0.8em;
+	padding: 0.7em 0.7em 0em;
+}
+
+p {
+	font-weight: 600;
+	color: white;
+	font-size: 0.8em;
+	padding: 0.7em 0.7em 0em;
+}
+
+.Conversor {
+	font-size: 2em;
+	display: flex;
+	width: 26em;
+	background: #2e822e;
+	padding: 0.4em;
+	border-radius: 0.4em;
+	
+	float: left;
+}
+
+.Conversor * {
+	border-style: none;
+	border-radius: 0.25em;
+	margin: 0.2em;
+}
+
+input {
+	background:  #88f987;
+}
+
+.PantallaConversor {
+	font-size: inherit;
+	
+	padding: 0.2em 0.5em;
+	width: 8em;
+}
+
+.BotonesConversor {
+	display: grid;
+	grid-template-columns: 3em 3em 3em;
+}
+
+.BotonesConversor input {
+	font-size: inherit;
+	padding: 0.4em;
+}
+
+.BotonesConversor input:hover {
+	background: #ffe718;
+}
+
+.BotonesConversor input:active {
+	background: #abffaa;
+}
+
+.SelectorUnidades {
+	border-style: solid;
+	border-width: 0.1em;
+	border-color: #88f987;
+	margin-left: 0.8em;
+}
+
+.SelectorUnidades div {
+	display: grid;
+	grid-template-columns: 3.2em 3.5em 3.5em 3.5em;
+}
+
+.SelectorUnidades div input {
+	font-size: 0.6em;
+	padding: 0.42em 0em;
+	margin: 0.25em
+}
+
+#clearBt {
+	grid-column: span 3;
+}
+
+label {
+	font-size: 0.8em;
+	background: #88f987;
+	padding: 0.2em 0.5em;
+	margin-bottom: 0.6em;
+}

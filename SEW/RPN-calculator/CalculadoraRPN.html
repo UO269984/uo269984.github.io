@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Calculadora RPN</title>
+	<link rel="stylesheet" type="text/css" href="CalculadoraRPN.css" />
+	
+	<script src="CalculadoraRPN.js"></script>
+</head>
+<body>
+	<h1>Calculadora RPN</h1>
+	<div class="Calculadora">
+		<div id="pilaCalculadora"><ol><li></li></ol></div>
+		
+		<label for="pantallaCalculadora">pantalla</label>
+		<input id="pantallaCalculadora" name="pantalla" type="text" title="pantalla" value="0" disabled />
+		<div class="BotonesCalculadora" lang="en">
+			<input class="op1" type="button" value="sin" onClick="gui.sin()" />
+			<input class="op1" type="button" value="cos" onClick="gui.cos()" />
+			<input class="op1" type="button" value="tan" onClick="gui.tan()" />
+			<input class="op2" type="button" value="x^y" onClick="gui.pow()" />
+			<input class="op1" type="button" value="x^2" onClick="gui.square()" />
+			
+			<input class="op1" type="button" value="asin" onClick="gui.asin()" />
+			<input class="op1" type="button" value="acos" onClick="gui.acos()" />
+			<input class="op1" type="button" value="atan" onClick="gui.atan()" />
+			<input class="op2" type="button" value="/" onClick="gui.div()" />
+			<input class="op1" type="button" value="sqrt" onClick="gui.sqrt()" />
+			
+			<input type="button" value="7" onClick="gui.addDigitToNumber('7')" />
+			<input type="button" value="8" onClick="gui.addDigitToNumber('8')" />
+			<input type="button" value="9" onClick="gui.addDigitToNumber('9')" />
+			<input class="op2" type="button" value="*" onClick="gui.mul()" />
+			<input class="op1" type="button" value="!x" onClick="gui.fact()" />
+			
+			<input type="button" value="4" onClick="gui.addDigitToNumber('4')" />
+			<input type="button" value="5" onClick="gui.addDigitToNumber('5')" />
+			<input type="button" value="6" onClick="gui.addDigitToNumber('6')" />
+			<input class="op2" type="button" value="-" onClick="gui.sub()" />
+			<input class="op1" type="button" value="ln" onClick="gui.ln()" />
+			
+			<input type="button" value="1" onClick="gui.addDigitToNumber('1')" />
+			<input type="button" value="2" onClick="gui.addDigitToNumber('2')" />
+			<input type="button" value="3" onClick="gui.addDigitToNumber('3')" />
+			<input class="op2" type="button" value="+" onClick="gui.sum()" />
+			<input class="op1" type="button" value="exp" onClick="gui.exp()" />
+			
+			<input type="button" value="." onClick="gui.addDigitToNumber('.')" />
+			<input type="button" value="0" onClick="gui.addDigitToNumber('0')" />
+			<input class="btGrande" title="Añadir a la pila" type="button" value="Enter" onClick="gui.addNumberToStack()" />
+			<input title="Borrar número" type="button" value="C" onClick="gui.resetNumber()" />
+			
+			<input class="btGrande" title="Borrar elemento de la pila" type="button" value="«- pila" onClick="gui.stack_delLast()" />
+			<input class="btGrande" title="Vaciar pila" type="button" value="Borrar pila" onClick="gui.clearStack()" />
+			<input title="Borrar carácter" type="button" value="«-" onClick="gui.number_delLast()" />
+		</div>
+	</div>
+	<section>
+		<p>Una calculadora RPN trabaja con una lista donde se almacenen los números para operar y se muestran los resultados de las operaciones.</p>
+		<p>Para operar se utilizan los dos últimos valores de la lista</p>
+	</section>
+	<script>gui.updateCanMakeOperations()</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+body {
+	font: 100 1em "Arial", sans-serif;
+	background: #d3ffcf;
+	
+	margin: 5% 10%;
+}
+
+h1 {
+	font-size: 4em;
+	
+	margin: 0.5em 0em;
+}
+
+.Calculadora {
+	font-size: 2em;
+	background: #2e822e;
+	padding: 0.4em;
+	border-radius: 0.4em;
+	
+	float: left;
+}
+
+.Calculadora * {
+	border-style: none;
+	border-radius: 0.25em;
+	margin: 0.2em;
+}
+
+label {
+	display: none;
+	font-size: 0.5em;
+	vertical-align: text-top;
+}
+
+#pantallaCalculadora {
+	font-size: inherit;
+	text-align: right;
+	background:  #88f987;
+	
+	padding: 0.2em 0.5em;
+	width: 14em;
+}
+
+#pilaCalculadora ol {
+	text-align: right;
+	
+	overflow: auto;
+	height: 9.4em;
+	background: #88f987;
+	
+	list-style-type: none;
+	padding: 0.2em 0.5em;
+}
+
+#pilaCalculadora ol li {
+	padding: 0.1em 0.4em;
+}
+
+
+.BotonesCalculadora {
+	display: grid;
+	grid-template-columns: 3em 3em 3em 3em 3em;
+}
+
+.BotonesPrincipales {
+	display: grid;
+	grid-template-columns: 3em 3em 3em 3em 3em;
+}
+
+.BotonesCalculadora input {
+	font-size: inherit;
+	background: #88f987;
+	padding: 0.4em;
+}
+
+.btGrande {
+	grid-column: span 2;
+}
+
+.BotonesCalculadora input:hover {
+	background: #ffe718;
+}
+
+.BotonesCalculadora input:active {
+	background: #abffaa;
+}
+
+p {
+	margin: 0em 0em 0.7em;
+}
+
+section {
+	float: left;
+	width: 18em;
+	font-size: 1.3em;
+	background: #88f987;
+	line-height: 1.2em;
+	
+	border-width: 0.8em;
+	border-style: solid;
+	border-color: #2e822e;
+	border-radius: 1.2em;
+	
+	padding: 0.8em;
+	margin: 0.8em;
+}
+
+.LastElems {
+	background: #58d557;
+}
